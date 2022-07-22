@@ -35,6 +35,16 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 
 ### scatterplot
 
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
+```
+
+
+```{r}
+basicNN + geom_point()
+```
+This scatter plot exhibits a positive linear relationship between SIMS and ARM. Essentially, this means that those workers with greater arm strength performed better on the simulations that were utilized to measure job performance. The greater the arm strength, the better their simulation performance. 
+
 ### Numerical results
 
 
