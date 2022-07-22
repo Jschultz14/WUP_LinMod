@@ -47,6 +47,10 @@ This scatter plot exhibits a positive linear relationship between SIMS and ARM. 
 
 ### Numerical results
 
+```{r}
+cor(SIMS~ARM,data=data)
+```
+This value shows the exact correlation coefficient on the relationship between arm strength and simulation performance. This value, 0.686, is a pretty significant number that lends itself to a positive linear relationship between SIMS and ARM.
 
 ### Inferential  (Build model.1)
 
