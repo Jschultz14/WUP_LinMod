@@ -63,7 +63,7 @@ The first model above shows the linear model of the relationship between SIMS an
 #### Predict at target point
 
 ```{r}
-Targetpoint <- data.frame(ARM = 88, Grip = 94)
+Targetpoint <- data.frame(ARM = 88, GRIP = 94)
 ```
 
 ```{r}
@@ -140,7 +140,7 @@ The model featured above shows the relationship of between SIMS, ARM, and GRIP a
 #### predict model.3 at target point
   
 ```{r}
- predict(model.3, Targetpoint, interval = "prediction")
+predict(model.3, Targetpoint, interval = "prediction")
 ```
 
 ## Comparing nested models ANOVA Test
@@ -157,6 +157,7 @@ The anova test above offers that model 1 has a residual standard error of 217.88
 ```{r}
 anova(model.2, model.3)
 ``` 
+Based on this anova test, we can see that model 2 has a residual standard error of 243.07 and model 3 has a residual standard error of 188.43. This means that model 3 reduced the residual standard error of model 2 by 54.639. Again, the p-value shows that this is statistically significant. As such, we can once again confidently confirm that model 3 is better than model 2. 
 
 ## Informally compare Model.1 with model.2
 
