@@ -94,6 +94,10 @@ Again, there appears to be a positive linear relationship between SIMS and GRIP.
 
 ### Numerical results 
 
+```{r}
+cor(SIMS~GRIP,data=data)
+```
+This value shows the specific correlation coefficient on the relationship between SIMS and GRIP. Still a significant number at 0.639 to show a positive linear relationship between SIMS and GRIP, it is not as high as the number shown in the first model. 
 
 ### Inferential  (Build model.2)
   
