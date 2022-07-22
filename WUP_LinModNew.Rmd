@@ -101,6 +101,11 @@ This value shows the specific correlation coefficient on the relationship betwee
 
 ### Inferential  (Build model.2)
   
+```{r}
+model.2 <- lm(SIMS~GRIP, data=data)
+summary.lm(model.2)
+``` 
+Shown above is the linear model of the relationship exclusively between GRIP and SIMS. Like the last model, this also shows the standard residual standard error value and the adjusted R-squared. In comparison, we should expect that the standard deviation curve on this model will be wider than the previous model. The adjusted R-squared value on this values also means that we can reduce the error from the mean model by 40.53%. This percentage is lower than that of the first model, however. Majority of the error is still explained by the first model. 
 
 #### predict model.2 at target point
 
