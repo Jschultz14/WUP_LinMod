@@ -74,6 +74,10 @@ This data predicts the value we would find in model 1 if the target point for AR
 
 #### scatterplot with model fit
   
+```{r}
+basicNN + geom_point() + geom_lm()
+```
+This model now features the prediction line that was interpreted in previous models. It proves that the relationship results in a normal distribution, which 95% of the points are within two residual values from the line. 
 
 ## Model 2 SIM~GRIP
 
