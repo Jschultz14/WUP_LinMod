@@ -161,3 +161,7 @@ Based on this anova test, we can see that model 2 has a residual standard error 
 
 ## Informally compare Model.1 with model.2
 
+```{r}
+anova(model.2, model.1)
+```
+In the final anova model above, the order of the models is switched so as to ensure that the difference in RSS value would show the better model. As such, we can see that model 2 on this test, which is actually model 1, is the better model.
