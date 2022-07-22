@@ -109,9 +109,15 @@ Shown above is the linear model of the relationship exclusively between GRIP and
 
 #### predict model.2 at target point
 
+```{r}
+predict(model.2, Targetpoint, interval = "prediction")
+```
+
 #### now add the model fit to our plot for model.2
   
-
+```{r}
+basicGRIP + geom_point() + geom_lm
+```
 
 ## Model 3 SIM~ARM+GRIP
 
