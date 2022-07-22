@@ -43,6 +43,7 @@ basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
 ```{r}
 basicNN + geom_point()
 ```
+
 This scatter plot exhibits a positive linear relationship between SIMS and ARM. Essentially, this means that those workers with greater arm strength performed better on the simulations that were utilized to measure job performance. The greater the arm strength, the better their simulation performance. 
 
 ### Numerical results
@@ -58,6 +59,7 @@ This value shows the exact correlation coefficient on the relationship between a
 model.1 <- lm(SIMS~ARM,data=data)
 summary.lm(model.1)
 ```
+
 The first model above shows the linear model of the relationship between SIMS and ARM. Of the information listed above, the most essential is the residual standard error and the adjusted R-square value. At 1.226, the residual standard error exhibits that the values do not differ significantly from the predicted value. In addition to this, the value of the adjusted R-square value means we are dropping the error from the mean model by 46.6%.
 
 #### Predict at target point
@@ -69,6 +71,7 @@ Targetpoint <- data.frame(ARM = 88, GRIP = 94)
 ```{r}
 predict(model.1, Targetpoint, interval = "prediction")
 ```
+
 This data predicts the value we would find in model 1 if the target point for ARM was 88 and GRIP was 94. However, this data only shows a use for the target point of ARM. It disregards GRIP. 
 
 
@@ -78,7 +81,8 @@ This data predicts the value we would find in model 1 if the target point for AR
 basicNN + geom_point() + geom_lm()
 ```
 
- This model now features the prediction line that was interpreted in previous models. It proves that the relationship results in a normal distribution, which 95% of the points are within two residual values from the line. 
+
+This model now features the prediction line that was interpreted in previous models. It proves that the relationship results in a normal distribution, which 95% of the points are within two residual values from the line. 
 
 ## Model 2 SIM~GRIP
 
@@ -91,6 +95,7 @@ basicGRIP <- ggplot(data,aes(y=SIMS,x=GRIP))
 ```{r}
 basicGRIP + geom_point()
 ```
+
 Again, there appears to be a positive linear relationship between SIMS and GRIP. The greater GRIP strength of a worker, the better they perform on the simulation. 
 
 ### Numerical results 
@@ -119,6 +124,7 @@ predict(model.2, Targetpoint, interval = "prediction")
 ```{r}
 basicGRIP + geom_point() + geom_lm()
 ```
+
 This scatter plot has combined the original data with predicted values for SIM-GRIP. All information considered, this model is not so reliable as arm strength in predicting a worker's performance in the simulations. 
 
 ## Model 3 SIM~ARM+GRIP
