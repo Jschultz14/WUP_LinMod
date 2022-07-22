@@ -116,14 +116,17 @@ predict(model.2, Targetpoint, interval = "prediction")
 #### now add the model fit to our plot for model.2
   
 ```{r}
-basicGRIP + geom_point() + geom_lm
+basicGRIP + geom_point() + geom_lm()
 ```
+This scatter plot has combined the original data with predicted values for SIM-GRIP. All information considered, this model is not so reliable as arm strength in predicting a worker's performance in the simulations. 
 
 ## Model 3 SIM~ARM+GRIP
 
 ### Numerical results (cor)
 
-`
+```{r}
+cor(SIMS~ARM+GRIP,data=data)
+```
   
 ### Inferential  (Build 2-dimentional model.3)
 
