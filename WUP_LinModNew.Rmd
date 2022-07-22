@@ -54,6 +54,12 @@ This value shows the exact correlation coefficient on the relationship between a
 
 ### Inferential  (Build model.1)
 
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+The first model above shows the linear model of the relationship between SIMS and ARM. Of the information listed above, the most essential is the residual standard error and the adjusted R-square value. At 1.226, the residual standard error exhibits that the values do not differ significantly from the predicted value. In addition to this, the value of the adjusted R-square value means we are dropping the error from the mean model by 46.6%.
+
 #### Predict at target point
 
 
