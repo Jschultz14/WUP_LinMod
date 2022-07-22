@@ -127,8 +127,15 @@ This scatter plot has combined the original data with predicted values for SIM-G
 ```{r}
 cor(SIMS~ARM+GRIP,data=data)
 ```
+The value of the correlation coefficient of the third model appears to be larger then either of the previous two. This shows that this model may overall be better than the first two models, but additional testing can be conducted to confirm this. 
   
 ### Inferential  (Build 2-dimentional model.3)
+
+```{r}
+model.3 <- lm(SIMS~ARM+GRIP, data=data)
+summary.lm(model.3)
+``` 
+The model featured above shows the relationship of between SIMS, ARM, and GRIP altogether. According to the residual standard error and adjusted R-squared values, this model appears to be considerably better than the prior two models. The residual standard error is lower on this model, meaning the standard deviation curve should be more narrow. Additionally, the adjusted R-squared value is higher in comparison to the other two models, meaning this model could reduce up to 53.58% of error from the mean model. This show significantly better results than the previous two models which only showed relationships between ARM and GRIP to SIMS respectively. 
 
 #### predict model.3 at target point
   
