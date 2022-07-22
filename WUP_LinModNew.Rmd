@@ -83,6 +83,14 @@ This model now features the prediction line that was interpreted in previous mod
 
 ### Now add in scatterplot
 
+```{r}
+basicGRIP <- ggplot(data,aes(y=SIMS,x=GRIP))
+```
+
+```{r}
+basicGRIP + geom_point()
+```
+Again, there appears to be a positive linear relationship between SIMS and GRIP. The greater GRIP strength of a worker, the better they perform on the simulation. 
 
 ### Numerical results 
 
